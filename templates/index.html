@@ -1,0 +1,92 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+<div style="">
+
+    <!-- Header -->
+     <div style=" margin-left:auto;margin-right:auto;">
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+
+    </div>
+
+    <div class="container-fluid mt--7" >
+
+      <div class="row">
+        <div class="col-xl-8 mb-5 mb-xl-0">
+          <div class="card bg-gradient-default shadow">
+            <div class="card-header bg-transparent">
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <h6 class="text-uppercase text-light ls-1 mb-1">Speech to Text</h6>
+                  <h2 class="text-white mb-0"></h2>
+
+                </div>
+
+
+              </div>
+            </div>
+            <div class=class="text-uppercase text-light ls-1 mb-1" style="height:auto; color: white; ">
+              <!-- Chart -->
+              <div class="chart" style="width:95%;
+ ">{{text}}
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6"  >
+          <div class="col-lg-3 col-md-6" style="display: table; width: 100%; top: 100px;" >
+
+
+
+                 <div style="margin:20px;border-style: dashed; padding:15px;">
+                     <form enctype="multipart/form-data" method="POST" class="post-form">{% csrf_token %}
+                       {{ form.as_p }}
+                       <button type="submit" class="btn-icon-clipboard" >
+                        <div>
+                          <i class="ni ni-chart-bar-32"></i>
+                          <span>Speech to Text</span>
+                        </div>
+                       </button>
+                     </form>
+
+                </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div  style="padding-top: 2em; margin-top: 70px;   ">
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
