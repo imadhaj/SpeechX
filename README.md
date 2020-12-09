@@ -2,6 +2,13 @@
 
 <br />
 
+## App
+
+> A web application that recognize a speech spoken and saved an mp3/wav in format. (Python)
+
+> Developed django
+ 
+
 ## Demo
 
 > To authenticate use the default credentials ***Admin / Hasnoid123***.
